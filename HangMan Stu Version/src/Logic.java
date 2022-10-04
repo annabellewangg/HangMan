@@ -19,6 +19,7 @@ public class Logic {
      * @return the updated score
      */
     public static int updateScore(int score, boolean won){
+    	//score should increase by 1 if won is true
     	if (won == true) {
     		return score +1;
     	}
@@ -38,13 +39,15 @@ public class Logic {
      * @return the new list containing the newly made incorrect guess
      */
     public static String addStrike(String list, String guess){
+    	//if the indexOf the letter guessed is greater than zero, it is in the word
+    	//add to the list if it is not
     	if (list.indexOf(guess) >= 0) {
     		return list;
     	}
     	else {
-    		return list + guess;	
+    		return list + guess;
     	}
-    	
+
     }
     
     /**
@@ -57,6 +60,9 @@ public class Logic {
      * @return
      */
     public static boolean guessWord(String word, String guess) {
+    	//if the word and the guess match, return true
+    	//if the word and the lower case guess match, return true
+    	//otherwise, return false
     	if (word == guess) {
     		return true;
     	}
@@ -81,8 +87,29 @@ public class Logic {
      * @return true or false
      */
     public static boolean guessLetter(String word, String curr, String guess){
-        
-        return false;
+    	//check if the letter is in the word to be guessed
+    	//if true, check that the letter has not already been guessed in curr
+    	//if it is in the word and hasn't been guessed, return true
+    	//int charindex = 1;
+    	//while (charindex <= word.length()) {
+    		//if (curr.substring(charindex -1, charindex).equalsIgnoreCase(curr)) {
+    			//charindex++;
+    			//return false;
+    		//}
+    		//charindex++;
+    		//if (curr.substring(charindex -1, charindex))
+    		
+    	//}
+    	if (word.indexOf(guess) >= 0 && curr.indexOf(guess) >= 0) {
+    		return false;
+    	}
+    	else if (word.indexOf(guess) >= 0 && curr.indexOf(guess) < 0) {
+    		return true;
+    	}
+    	else {
+    		return false;
+    	}
+
     }
 
     /**
