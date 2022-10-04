@@ -19,7 +19,7 @@ public class HMRunner {
         System.out.println("should return 'rsltn' for addStrike(rslt, n):" + Logic.addStrike("rslt", "n"));
         System.out.println("should return 'abc' for addStrike(abc, c):" + Logic.addStrike("abc", "c"));
         System.out.println("should return 'true' for guessWord(word, WORD):" + Logic.guessWord("word", "WORD"));
-        System.out.println("should return 'true' for guessLetter(apcs, apc, s):" + Logic.guessLetter(apcs, apc, s);
+        System.out.println("should return 'true' for guessLetter(apcs, apc, s):" + Logic.guessLetter("apcs", "apc", "s"));
         
     }
     
