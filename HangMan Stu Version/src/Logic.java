@@ -144,6 +144,18 @@ public class Logic {
      */
     public static String withoutSpaces(String str){
         String result = "";
+        result += str.substring(0, 1);
+        int length = 1;
+        while (length <= str.length()) {
+        	if (str.substring(length -1, length).equals(" ")) {
+        		result += str.substring(length, length +1);
+        		length ++;
+        	}
+        	else {
+        		length ++;
+        	}
+        	
+        }
        
         return result;
     }
