@@ -198,6 +198,11 @@ public class Logic {
      */
     public static String reset(String word) {
         String result = " ";
+        int length = 1;
+        while (length <= word.length()) {
+        	result += "_";
+        	length ++;
+        }
        
         return result;
     }
