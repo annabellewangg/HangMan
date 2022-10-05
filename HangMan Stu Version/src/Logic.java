@@ -130,13 +130,13 @@ public class Logic {
         String result = "";
         if (curr.indexOf("_") >= 0 && curr.indexOf("guess") <0) {
         	 int length = 1;
-        	 int location = 0;
+        	 int position = 0;
              while (length <= word.length()) {
              	if (curr.substring(length -1, length).equals("_")) {
-             		location = length;
+             		position = length;
              		length ++;
              		if (word.substring(length -1, length).equals(guess)) {
-             			result += curr.substring(0, location -1) + guess.toLowerCase() + curr.substring(location);
+             			result += curr.substring(0, position -1) + guess.toLowerCase() + curr.substring(position);
              		}
              		else {
              			length++;
