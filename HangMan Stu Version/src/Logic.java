@@ -128,6 +128,7 @@ public class Logic {
      */
     public static String encrypt(String word, String curr, String guess) {
         String result = "";
+        
        
         return result;
     }
@@ -155,7 +156,13 @@ public class Logic {
      * @return the word with spaces as shown above
      */
     public static String withSpaces(String str){
-        String result = "";
+        String result = " ";
+        int length = 1;
+        while (length <= str.length()) {
+        	result += str.substring(length -1, length) + " ";
+        	length ++;
+        }
+        
        
         return result;
     }
