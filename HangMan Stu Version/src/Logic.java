@@ -128,7 +128,23 @@ public class Logic {
      */
     public static String encrypt(String word, String curr, String guess) {
         String result = "";
-        
+        if (curr.indexOf("_") >= 0 && curr.indexOf("guess") <0) {
+        	 int length = 1;
+        	 int location = 0;
+             while (length <= word.length()) {
+             	if (curr.substring(length -1, length).equals("_")) {
+             		location = length;
+             		length ++;
+             		if (word.substring(length -1, length).equals(guess)) {
+             			result += curr.substring(0, location -1) + guess.toLowerCase() + curr.substring(location);
+             		}
+             		else {
+             			length++;
+             		}
+             	}
+             }
+        }
+       
        
         return result;
     }
