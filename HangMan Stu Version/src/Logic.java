@@ -164,7 +164,7 @@ public class Logic {
         int length = 1;
         while (length <= str.length()) {
         	if (str.substring(length -1, length).equals(" ")) {
-        		result += str.substring(length, length +1);
+        		result += str.substring(length -1, length);
         		length ++;
         	}
         	else {
