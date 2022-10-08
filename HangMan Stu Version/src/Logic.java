@@ -155,16 +155,15 @@ public class Logic {
     public static String withoutSpaces(String str){
         String result = "";
         
-        int length = 0;
-        while (length < str.length()) {
-        	if (!str.substring(length, length+1).equals(" ")) {
-        		result += str.substring(length, length+1);
-        		length ++;
+    
+
+        for (int i = 0; i < str.length(); i++) {
+        	if (!str.substring(i, i + 1).equals(" ")) {
+        		result += str.substring(i, i + 1);
         	}
         	
-        	
         }
-       
+        
         return result;
     }
     
