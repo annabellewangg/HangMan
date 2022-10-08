@@ -126,23 +126,17 @@ public class Logic {
      * @param guess letter or word guessed by the player
      * @return new version of displayed text
      */
+    // if the letter guess is in word and is _ in curr, add to string
     public static String encrypt(String word, String curr, String guess) {
         String result = "";
-        if (curr.indexOf("_") >= 0 && curr.indexOf("guess") <0) {
-        	 int length = 1;
-        	 int position = 0;
-             while (length <= word.length()) {
-             	if (curr.substring(length -1, length).equals("_")) {
-             		position = length;
-             		length ++;
-             		if (word.substring(length -1, length).equals(guess)) {
-             			result += curr.substring(0, position -1) + guess.toLowerCase() + curr.substring(position);
-             		}
-             		else {
-             			length++;
-             		}
-             	}
-             }
+        
+        for (int i = 0; i < word.length(); i++) {
+        	if (word.substring(i, i+1).equals(guess) && curr.substring(i, i+1).equals("_")) {
+        		result += guess;
+        	}
+        	else {
+        		result += curr.substring(i, i+1);
+        	}
         }
        
        
