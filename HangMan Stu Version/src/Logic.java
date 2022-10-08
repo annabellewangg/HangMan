@@ -154,16 +154,14 @@ public class Logic {
      */
     public static String withoutSpaces(String str){
         String result = "";
-        result += str.substring(0, 1);
-        int length = 1;
-        while (length <= str.length()) {
-        	if (str.substring(length -1, length).equals(" ")) {
-        		result += str.substring(length -1, length);
+        
+        int length = 0;
+        while (length < str.length()) {
+        	if (!str.substring(length, length+1).equals(" ")) {
+        		result += str.substring(length, length+1);
         		length ++;
         	}
-        	else {
-        		length ++;
-        	}
+        	
         	
         }
        
@@ -178,7 +176,7 @@ public class Logic {
      * @return the word with spaces as shown above
      */
     public static String withSpaces(String str){
-        String result = " ";
+        String result = "";
         int length = 1;
         while (length <= str.length()) {
         	result += str.substring(length -1, length) + " ";
@@ -207,9 +205,9 @@ public class Logic {
      * @return a version of the word all with underscores
      */
     public static String reset(String word) {
-        String result = " ";
-        int length = 1;
-        while (length <= word.length()) {
+        String result = "";
+        int length = 0;
+        while (length < word.length()) {
         	result += "_";
         	length ++;
         }

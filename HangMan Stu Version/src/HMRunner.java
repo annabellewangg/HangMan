@@ -21,10 +21,10 @@ public class HMRunner {
         //System.out.println("should return 'true' for guessWord(word, WORD): " + Logic.guessWord("word", "WORD"));
         //System.out.println("should return 'true' for guessLetter(apcs, apc, s): " + Logic.guessLetter("apcs", "apc", "s"));
         //System.out.println("should return 'a p c s' for withSpaces(apcs): " + Logic.withSpaces("apcs"));
-       // System.out.println("should return 'apcs' for withoutSpaces(a p c s): " + Logic.withoutSpaces("a p c s"));
+       System.out.println("should return 'apcs' for withoutSpaces(a p c s): " + Logic.withoutSpaces("a p c s"));
         //System.out.println("should return '____' for reset(apcs): " + Logic.reset("apcs"));
-        System.out.println("should return _pcs for encrypt.(apcs, __cs, p): " + Logic.encrypt("apcs", "__cs", "p"));
-        
+        //System.out.println("should return _pcs for encrypt.(apcs, __cs, p): " + Logic.encrypt("apcs", "__cs", "p"));
+        //System.out.println("should return ____ for reset.(apcs): " + Logic.reset("apcs"));
     }
     
 }
